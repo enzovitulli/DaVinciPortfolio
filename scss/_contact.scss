@@ -1,0 +1,364 @@
+.contact-section {
+    margin-top: 6.25rem; // Match navbar height
+    min-height: calc(100vh - 6.25rem); // Changed from height to min-height
+    
+    .container-fluid {
+        min-height: 100%; // Changed from height to min-height
+    }
+
+    .row {
+        min-height: 100%; // Added this to ensure row takes full height
+    }
+
+    .form-column {
+        background-color: $light-background;
+        color: $secondary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        min-height: 50vh; // Added minimum height for mobile
+        height: 100%;
+    }
+
+    .empty-column {
+        background-color: $dark-background;
+        min-height: 50vh; // Added minimum height for mobile
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        height: 100%;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem; // Reduced gap for mobile
+        width: 100%;
+        max-width: 600px;
+        padding: 0.5rem; // Reduced padding for mobile
+    }
+
+    .contact-square {
+        background-color: $dark-background;
+        border: 2px solid $accent-color;
+        padding: 1rem; // Reduced padding for mobile
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        aspect-ratio: 1;
+        min-width: 0; // Allow shrinking
+        overflow: hidden; // Prevent text overflow
+
+        i {
+            color: $accent-color;
+            font-size: 1.5rem; // Smaller for mobile
+            margin-bottom: 0.5rem; // Reduced margin for mobile
+        }
+
+        h4 {
+            color: $primary-color;
+            font-family: $font-header;
+            font-size: 1rem; // Increased from 0.9rem
+            margin-bottom: 0.5rem; // Reduced margin for mobile
+            white-space: nowrap; // Prevent wrapping of titles
+        }
+
+        p {
+            color: $primary-color;
+            font-family: $font-body;
+            font-size: 0.85rem; // Increased from 0.75rem
+            line-height: 1.3; // Slightly increased
+            margin: 0;
+            white-space: pre-line; // Add this to preserve line breaks
+            width: 100%; // Ensure text takes full width
+
+            br {
+                display: none; // Hide line breaks on mobile
+            }
+
+            span {
+                display: block; // Add this to force line breaks
+                margin-bottom: 0.2rem; // Add some spacing between lines
+            }
+        }
+
+        @include respond-to(desktop) {
+            padding: 1.5rem;
+
+            i {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+                br {
+                    display: block; // Show line breaks on desktop
+                }
+            }
+        }
+    }
+
+    .form-container {
+        max-width: 500px;
+        width: 100%;
+        padding: 0 1rem;
+
+        h1 {
+            font-family: $font-header;
+            color: $secondary-color;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-family: $font-body;
+            color: $secondary-color;
+        }
+
+        .form-label {
+            font-family: $font-body;
+            color: $secondary-color;
+        }
+
+        .form-control {
+            border: 1px solid rgba($secondary-color, 0.2);
+            border-radius: 0;
+            padding: 0.8rem;
+            font-family: $font-body;
+
+            &:focus {
+                box-shadow: none;
+                border-color: $accent-color;
+            }
+        }
+
+        .btn-primary {
+            background-color: $accent-color;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-size: 1.2rem;
+            width: 100%;
+            font-family: $font-header;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            
+            &:hover {
+                background-color: darken($accent-color, 10%);
+            }
+
+            @include respond-to(desktop) {
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
+            }
+        }
+    }
+
+    @include respond-to(desktop) {
+        .form-container {
+            padding: 0 2rem;
+        }
+        .form-column, .empty-column {
+            height: 100%; // Full height only on desktop
+            min-height: 100%; // Ensure minimum height is maintained
+        }
+    }
+
+    @media (max-width: 380px) {
+        .contact-grid {
+            gap: 0.5rem; // Even smaller gap for very small screens
+            padding: 0.25rem;
+        }
+
+        .contact-square {
+            padding: 0.75rem;
+            
+            i {
+                font-size: 1.2rem;
+                margin-bottom: 0.3rem;
+            }
+
+            h4 {
+                font-size: 0.9rem; // Increased from 0.8rem
+                margin-bottom: 0.3rem;
+            }
+
+            p {
+                font-size: 0.8rem; // Increased from 0.7rem
+            }
+        }
+    }
+}
+
+.faq-section {
+    background-color: $dark-background;
+    padding: 3rem 1rem;
+    border-top: 2px solid $accent-color;
+
+    .accordion {
+        max-width: 800px;
+        margin: 0 auto;
+
+        &-item {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba($accent-color, 0.2);
+
+            &:first-of-type {
+                border-top: 1px solid rgba($accent-color, 0.2);
+            }
+        }
+
+        &-button {
+            background-color: transparent;
+            color: $primary-color;
+            font-family: $font-header;
+            font-size: 1.1rem;
+            padding: 1.5rem 0;
+
+            &:not(.collapsed) {
+                background-color: transparent;
+                color: $accent-color;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &::after {
+                filter: brightness(0) invert(1);
+            }
+
+            @include respond-to(desktop) {
+                font-size: 1.3rem;
+            }
+        }
+
+        &-body {
+            color: $primary-color;
+            font-family: $font-body;
+            font-size: 1rem;
+            padding: 1rem 0 2rem;
+            line-height: 1.6;
+
+            @include respond-to(desktop) {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+.table-section {
+    background-color: $light-background;
+    padding: 3rem 1rem;
+    border-top: 2px solid $accent-color;
+
+    h2 {
+        font-family: $font-header;
+        color: $secondary-color;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+
+        @include respond-to(desktop) {
+            font-size: 2.5rem;
+        }
+    }
+
+    .table {
+        font-family: $font-body;
+        color: $secondary-color;
+        border-color: $accent-color;
+        font-size: 0.85rem;
+        
+        th {
+            background-color: $dark-background;
+            color: $primary-color;
+            border-color: $accent-color;
+            font-family: $font-header;
+            padding: 0.75rem 0.5rem; // Reduced horizontal padding (top/bottom left/right)
+        }
+
+        tbody {
+            tr:nth-of-type(odd) {
+                background-color: rgba($muted-color, 0.1);
+            }
+            tr:nth-of-type(even) {
+                background-color: $primary-color;
+            }
+        }
+
+        td {
+            border-color: $accent-color;
+            vertical-align: middle;
+            padding: 0.75rem 0.5rem; // Reduced horizontal padding (top/bottom left/right)
+        }
+
+        @include respond-to(desktop) {
+            font-size: 1rem;
+            th, td {
+                padding: 1rem; // Keep original padding for desktop
+            }
+        }
+    }
+}
+
+.modal {
+    .modal-content {
+        background-color: $light-background;
+        border: 1px solid $accent-color;
+    }
+
+    .modal-header {
+        border-bottom-color: $accent-color;
+        padding: 1.5rem 1.5rem 1rem; // Added more padding
+
+        .modal-title {
+            font-family: $font-header;
+            color: $secondary-color;
+            font-size: 1.75rem; // Increased font size
+        }
+
+        .btn-close {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+        p {
+            font-family: $font-body;
+            color: $secondary-color;
+            margin: 0;
+            font-size: 1.1rem; // Slightly increased body text
+        }
+    }
+
+    .modal-footer {
+        border-top-color: $accent-color;
+        padding: 1rem 1.5rem 1.5rem; // Added more padding
+
+        .btn-primary {
+            background-color: $accent-color;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-size: 1.2rem;
+            font-family: $font-header;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            
+            &:hover {
+                background-color: darken($accent-color, 10%);
+            }
+        }
+    }
+}

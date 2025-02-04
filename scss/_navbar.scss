@@ -1,0 +1,243 @@
+.navbar {
+    background-color: $crimson;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 6.25rem;
+    margin: 0;
+    z-index: 3;
+
+    .navbar-toggler {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        div {
+            width: 30px;
+            height: 3px;
+            background-color: $primary-color;
+            border-radius: 5px;
+            transition: all 0.3s linear;
+            position: relative;
+            transform-origin: 1px;
+
+            &:nth-child(1) {
+                transform: rotate(0deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(0deg);
+            }
+        }
+
+        &.active div {
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .navbar-brand-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+
+            img {
+                height: 3.25rem; // Increased from 2.5rem for mobile
+                width: auto;
+                min-width: 3.25rem; // Match height
+
+                @include respond-to(desktop) {
+                    height: 4rem; // Increased height for desktop
+                    min-width: 4rem;
+                }
+            }
+
+            .brand-name {
+                font-family: $font-special;
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+                color: $primary-color;
+                margin-left: 1rem;
+
+                @include respond-to(desktop) {
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    margin-left: 1rem;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .navbar-nav {
+        margin-left: 3rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-family: $font-header;
+        font-size: 1.5rem;
+        color: $primary-color;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    .container {
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @include respond-to(desktop) {
+        .container {
+            justify-content: space-between;
+        }
+
+        .navbar-nav {
+            margin: 0 auto;
+        }
+    }
+}
+
+.offcanvas {
+    background-color: $crimson;
+    color: $primary-color;
+    max-width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    visibility: visible; // Keep it visible for transition
+    z-index: 2;
+
+    &.show {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .offcanvas-header {
+        border-bottom: 1px solid $muted-color;
+        display: none;
+    }
+
+    .offcanvas-body {
+        padding-top: 6rem;
+        .nav-link {
+            font-family: $font-header;
+            font-size: 1.5rem;
+            color: $primary-color;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: $primary-color;
+    font-size: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.search-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    background-color: $crimson;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    padding-top: 6.25rem;
+    
+    .search-container {
+        height: calc(100% - 6.25rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        margin: 0;
+    }
+
+    .search-input {
+        width: 80%;
+        max-width: 800px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid $primary-color;
+        padding: 0.5rem 1rem;
+        color: $primary-color;
+        font-family: $font-body;
+        font-size: 2rem;
+        text-align: center;
+
+        &::placeholder {
+            color: rgba($primary-color, 0.7);
+        }
+
+        &::selection {
+            background-color: rgba($accent-color, 0.3);
+            color: $primary-color;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $accent-color;
+            caret-color: $accent-color;
+        }
+    }
+
+    &.active {
+        transform: translateY(0);
+    }
+}

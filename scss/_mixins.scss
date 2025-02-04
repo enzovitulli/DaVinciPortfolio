@@ -1,0 +1,7 @@
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'desktop' {
+        @media (min-width: 1000px) { @content; }
+    } @else {
+        @content; // Mobile first approach - default styles
+    }
+}

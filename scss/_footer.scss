@@ -1,0 +1,77 @@
+footer {
+  background-color: $crimson;
+  color: $primary-color;
+  padding: 3rem 1rem;
+
+  .footer-sections {
+    display: flex;
+    justify-content: space-around; // Changed from space-between
+    gap: 1rem; // Reduced gap for mobile
+    margin-bottom: 2rem;
+    width: 100%;
+
+    .footer-column {
+      flex: 0 1 auto; // Changed from flex: 1 1 200px
+      min-width: 120px; // Minimum width for columns
+
+      h5 {
+        font-family: $font-header;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        white-space: nowrap; // Prevent text wrapping
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-family: $font-body;
+          margin-bottom: 0.5rem;
+
+          a {
+            color: $primary-color;
+
+            &:hover {
+              color: $accent-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-family: $font-body;
+    border-top: 1px solid $muted-color;
+    padding-top: 1rem;
+
+    .social-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem; // Use gap instead of margins
+
+      a {
+        color: $primary-color;
+        font-size: 2em;
+        display: flex; // Ensure icons are centered
+        align-items: center;
+        justify-content: center;
+        min-width: 24px; // Minimum width for icons
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
+  @include respond-to(desktop) {
+    .footer-sections {
+      flex-wrap: nowrap;
+      gap: 2rem;
+    }
+  }
+}

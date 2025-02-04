@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Leonardo Da Vinci Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Compiled CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Mobile Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-lg-none">
+        <div class="container">
+            <button class="navbar-toggler" type="button">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <div class="navbar-brand-container">
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="assets/logo/logo.png" alt="Vitruvian Man">
+                    <span class="brand-name">da Vinci <br> Portfolio</span>
+                </a>
+            </div>
+            <button class="btn search-btn" id="searchIconMobile">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Side Panel -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileNav">
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Desktop Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-flex">
+        <div class="container">
+            <div class="navbar-brand-container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo/logo.png" alt="Vitruvian Man">
+                    <span class="brand-name">da Vinci <br> Portfolio</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <button class="btn search-btn" id="searchIconDesktop">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Gallery Navigation -->
+    <div class="gallery-nav">
+        <div class="container">
+            <ul class="nav nav-tabs w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="#paintings">Paintings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sculptures">Sculptures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#drawings">Drawings</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <!-- Paintings Section -->
+            <div id="paintings" class="gallery-category">
+                <h2 class="category-title">Paintings</h2>
+                <div class="list">
+                    <img src="assets/img/paintings/monalisa.webp">
+                    <img src="assets/img/paintings/4lastsu1.jpg">
+                    <img src="assets/img/paintings/1angel.jpg">
+                    <img src="assets/img/paintings/2annunc.jpg">
+                    <img src="assets/img/paintings/2ferroni.jpg">
+                    <img src="assets/img/paintings/3litta.jpg">
+                    <img src="assets/img/paintings/5benois.jpg">
+                    <img src="assets/img/paintings/8jerome.jpg">
+                    <img src="assets/img/paintings/bacchus.jpg">
+                    <img src="assets/img/paintings/dreyfus-madonna.jpg">
+                    <img src="assets/img/paintings/lady-with-an-ermine.jpg">
+                    <img src="assets/img/paintings/leda-and-the-swan.jpg">
+                    <img src="assets/img/paintings/salvator-mundi.jpg">
+                    <img src="assets/img/paintings/st-john-the-baptist.jpg">
+                    <img src="assets/img/paintings/the-adoration-of-the-magi.jpg">
+                    <img src="assets/img/paintings/the-virgin-and-child-with-saint-anne.jpg">
+                </div>
+            </div>
+
+            <!-- Sculptures Section -->
+            <div id="sculptures" class="gallery-category">
+                <h2 class="category-title">Sculptures</h2>
+                <div class="list">
+                    <img src="assets/img/sculptures/unnamed.jpg">
+                </div>
+            </div>
+
+            <!-- Drawings Section -->
+            <div id="drawings" class="gallery-category">
+                <h2 class="category-title">Drawings</h2>
+                <div class="list">
+                    <img src="assets/img/drawings/1vitruviu.jpg">
+                    <img src="assets/img/drawings/01helmet.jpg">
+                    <img src="assets/img/drawings/anatomical-studies-of-the-shoulder.jpg">
+                    <img src="assets/img/drawings/black-berries.jpg">
+                    <img src="assets/img/drawings/design-for-a-giant-crossbow.jpg">
+                    <img src="assets/img/drawings/dragon-striking-down-lion.jpg">
+                    <img src="assets/img/drawings/drawing-of-a-botanical-study.jpg">
+                    <img src="assets/img/drawings/embryo-in-the-womb.jpg">
+                    <img src="assets/img/drawings/female-head.jpg">
+                    <img src="assets/img/drawings/head-of-a-young-woman.jpg">
+                    <img src="assets/img/drawings/la-bella-principessa.jpg">
+                    <img src="assets/img/drawings/machine-gun.jpg">
+                    <img src="assets/img/drawings/muscles-of-the-back.jpg">
+                    <img src="assets/img/drawings/muscles-of-the-torso-side-view.jpg">
+                    <img src="assets/img/drawings/skeleton-foot.jpg">
+                    <img src="assets/img/drawings/sketch-of-a-roaring-lion.jpg">
+                    <img src="assets/img/drawings/the-skull.jpg">
+                    <img src="assets/img/drawings/two-horsemen-fighting-a-dragon.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h5>About</h5>
+                    <ul>
+                        <li><a href="#">The Artist</a></li>
+                        <li><a href="#">Timeline</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 Da Vinci Portfolio. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+.gallery-section {
+    background-color: $dark-background;
+    min-height: 100vh;
+    padding: 13rem 1rem 2rem; // Increased top padding to account for nav
+
+    @include respond-to(desktop) {
+        padding-top: 14rem; // More padding for desktop with fixed nav
+    }
+
+    .gallery-category {
+        margin-bottom: 4rem;
+
+        .category-title {
+            color: $primary-color;
+            font-family: $font-header;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+
+            @include respond-to(desktop) {
+                font-size: 3.5rem;
+                text-align: left;
+            }
+        }
+
+        .list {
+            columns: 300px;
+            column-gap: 1rem;
+
+            img {
+                width: 100%;
+                margin-bottom: 1rem;
+                display: block;
+            }
+        }
+    }
+}
+
+// Navigation styles (desktop only)
+.gallery-nav {
+    background-color: $dark-background;
+    position: fixed;
+    top: 6.25rem; // Match navbar height
+    left: 0;
+    right: 0;
+    z-index: 1; // Lower z-index so offcanvas (z-index: 2) appears above
+    padding: 1rem; // Restored full padding
+    border-bottom: 1px solid rgba($accent-color, 0.2);
+
+    .container {
+        padding: 0; // Remove container padding for mobile
+        margin: 0;
+        max-width: 100%;
+        display: flex; // Add flex display
+        justify-content: center; // Center horizontally
+        
+        @include respond-to(desktop) {
+            padding: 0; // Override desktop padding
+        }
+    }
+
+    .nav-tabs {
+        border: none;
+        display: flex;
+        gap: 2rem; // Reduced gap for mobile
+        overflow-x: auto; // Allow horizontal scroll on mobile
+        padding: 0.5rem 0; // Restored vertical padding
+        width: auto; // Change from 100% to auto
+        margin: 0; // Remove any margin
+        justify-content: center; // Center nav items
+        
+        &::-webkit-scrollbar {
+            display: none; // Hide scrollbar
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: $accent-color;
+            border-radius: 3px;
+        }
+        
+        .nav-link {
+            color: $primary-color;
+            font-family: $font-header;
+            border: none;
+            padding: 0.5rem 0; // Remove horizontal padding
+            font-size: 1.1rem;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            background: none;
+            
+            &:hover {
+                opacity: 0.7;
+            }
+
+            @include respond-to(desktop) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .dropdown {
+        .btn-primary {
+            background-color: $accent-color;
+            border: none;
+            font-family: $font-header;
+            
+            &:hover {
+                background-color: darken($accent-color, 10%);
+            }
+        }
+
+        .dropdown-menu {
+            background-color: $light-background;
+            border: 1px solid $accent-color;
+
+            .dropdown-item {
+                font-family: $font-header;
+                color: $secondary-color;
+
+                &:hover {
+                    background-color: rgba($accent-color, 0.1);
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+}

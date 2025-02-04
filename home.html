@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Da Vinci Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Compiled CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Mobile Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-lg-none">
+        <div class="container">
+            <button class="navbar-toggler" type="button">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <div class="navbar-brand-container">
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="assets/logo/logo.png" alt="Vitruvian Man">
+                    <span class="brand-name">da Vinci <br> Portfolio</span>
+                </a>
+            </div>
+            <button class="btn search-btn" id="searchIconMobile">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Side Panel -->
+    <div class="offcanvas offcanvas-start d-lg-none" id="mobileNav">
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Desktop Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-flex">
+        <div class="container">
+            <div class="navbar-brand-container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo/logo.png" alt="Vitruvian Man">
+                    <span class="brand-name">da Vinci <br> Portfolio</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <button class="btn search-btn" id="searchIconDesktop">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Leonardo <br> da Vinci</h1>
+            <a href="contact.html" class="btn btn-primary">Comission artwork</a>
+            <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
+        </div>
+        <div class="hero-image">
+            <img src="assets/img/heroSectionPictureUpscaled.png" alt="Leonardo da Vinci">
+        </div>
+    </header>
+
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="container-fluid px-4">
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-12 col-md-6 col-lg-4 feature-container">
+                    <div class="feature-card">
+                        <a href="gallery.html" class="feature-link">
+                            <img src="assets/img/featured/painting.png" alt="Paintings">
+                            <div class="overlay">
+                                <h5>Paintings</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 feature-container">
+                    <div class="feature-card">
+                        <a href="gallery.html" class="feature-link">
+                            <img src="assets/img/featured/sculpting.png" alt="Sculptures">
+                            <div class="overlay">
+                                <h5>Sculptures</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 feature-container">
+                    <div class="feature-card">
+                        <a href="gallery.html" class="feature-link">
+                            <img src="assets/img/featured/drawing.png" alt="Drawings">
+                            <div class="overlay">
+                                <h5>Drawings</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Carousel Section -->
+    <section class="carousel-section">
+        <div class="container">
+            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="review-content">
+                            <div class="reviewer-image-container">
+                                <img src="assets/img/reviews/isabella.png" alt="Isabella d'Este">
+                            </div>
+                            <div class="review-text-container">
+                                <div class="review-text">
+                                    <p>"His attention to detail is unlike anything I've ever seen. The way he captured my daughter's essence is truly remarkable."</p>
+                                    <span class="reviewer-name">- Isabella d'Este</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="review-content">
+                            <div class="reviewer-image-container">
+                                <img src="assets/img/reviews/beatrice.png" alt="Beatrice Sforza">
+                            </div>
+                            <div class="review-text-container">
+                                <div class="review-text">
+                                    <p>"A true master of his craft. The commissioned portrait exceeded all expectations."</p>
+                                    <span class="reviewer-name">- Beatrice Sforza</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="review-content">
+                            <div class="reviewer-image-container">
+                                <img src="assets/img/reviews/cecilia.png" alt="Cecilia Gallerani">
+                            </div>
+                            <div class="review-text-container">
+                                <div class="review-text">
+                                    <p>"His innovative techniques and vision create artwork that speaks to the soul. Simply extraordinary."</p>
+                                    <span class="reviewer-name">- Cecilia Gallerani</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to My Newsletter</h2>
+                <p>Stay updated with my latest works</p>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Subscribe Now
+                    </button>
+                    <div class="dropdown-menu">
+                        <form class="px-4 py-3">
+                            <div class="mb-3">
+                                <label for="newsletterEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="newsletterEmail" placeholder="email@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select" aria-label="Subscription type">
+                                    <option selected>Select subscription type</option>
+                                    <option value="1">Monthly Art Updates</option>
+                                    <option value="2">Exhibition Notifications</option>
+                                    <option value="3">Commission Availability</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Sign up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h5>About</h5>
+                    <ul>
+                        <li><a href="#">The Artist</a></li>
+                        <li><a href="#">Timeline</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 Da Vinci Portfolio. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

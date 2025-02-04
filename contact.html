@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Leonardo Da Vinci Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Compiled CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Mobile Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-lg-none">
+        <div class="container">
+            <button class="navbar-toggler" type="button">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <div class="navbar-brand-container">
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="assets/logo/logo.png" alt="Vitruvian Man">
+                    <span class="brand-name">da Vinci <br> Portfolio</span>
+                </a>
+            </div>
+            <button class="btn search-btn" id="searchIconMobile">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Side Panel -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileNav">
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Desktop Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-flex">
+        <div class="container">
+            <div class="navbar-brand-container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo/logo.png" alt="Vitruvian Man">
+                    <span class="brand-name">da Vinci <br> Portfolio</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <button class="btn search-btn" id="searchIconDesktop">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+    </div>
+
+    <!-- Contact Header -->
+    <section class="contact-section">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-12 col-lg-6">
+                    <div class="form-column">
+                        <div class="form-container">
+                            <h1>Contact Me</h1>
+                            <p>Let's discuss your next masterpiece.</p>
+                            <form class="needs-validation" novalidate>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                                    <label for="name">Name</label>
+                                    <div class="invalid-feedback">
+                                        Please provide your name.
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                    <label for="email">Email</label>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email.
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                    <label for="subject">Subject</label>
+                                    <div class="invalid-feedback">
+                                        Please provide a subject.
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="message" placeholder="Your message" style="height: 100px" required></textarea>
+                                    <label for="message">Message</label>
+                                    <div class="invalid-feedback">
+                                        Please provide a message.
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#confirmationModal">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="empty-column">
+                        <div class="contact-grid">
+                            <div class="contact-square">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h4>Workshop Address</h4>
+                                <p><span>Via dei Servi 12/r</span><span>50122 Firenze</span><span>Italy</span></p>
+                            </div>
+                            <div class="contact-square">
+                                <i class="far fa-clock"></i>
+                                <h4>Working Hours</h4>
+                                <p><span>Monday - Friday</span><span>9:00 AM - 6:00 PM</span><span>Weekends by appointment</span></p>
+                            </div>
+                            <div class="contact-square">
+                                <i class="far fa-envelope"></i>
+                                <h4>Email</h4>
+                                <p><span>maestro@davinci-studio.it</span><span>info@davinci-studio.it</span></p>
+                            </div>
+                            <div class="contact-square">
+                                <i class="fas fa-phone-alt"></i>
+                                <h4>Phone</h4>
+                                <p><span>+39 055 123 4567</span><span>+39 055 890 1234</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What is your artistic process like?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            My process begins with extensive sketches and studies. I believe in understanding the subject matter deeply before commencing the final work. Each piece typically involves multiple layers and techniques, developed over time to achieve the desired sfumato effect.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            How long does a commissioned piece take?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The timeline varies depending on the complexity and size of the work. A typical portrait can take 3-6 months, while larger pieces may require significantly more time. For detailed completion estimates for different types of works, please consult the timeline table below.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Do you accept international commissions?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, I welcome commissions from patrons worldwide. While I prefer initial consultations in person at my Florence workshop, I can arrange virtual meetings to discuss your vision in detail. I have experience working with international clients and can adapt to different time zones.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Can I request specific modifications to existing works?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            While each piece is unique, I can create variations of existing works incorporating your specific requirements. We can discuss your vision during the initial consultation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Table Section -->
+    <section class="table-section">
+        <div class="container">
+            <h2>Estimated Completion Times</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Artwork Type</th>
+                            <th scope="col">Size/Complexity</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Consult Sessions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portrait Painting</td>
+                            <td>Standard (30" x 40")</td>
+                            <td>3-4 months</td>
+                            <td>2-3 sessions</td>
+                        </tr>
+                        <tr>
+                            <td>Religious Scene</td>
+                            <td>Large (6' x 8')</td>
+                            <td>8-12 months</td>
+                            <td>4-5 sessions</td>
+                        </tr>
+                        <tr>
+                            <td>Technical Drawing</td>
+                            <td>Detailed Study</td>
+                            <td>1-2 months</td>
+                            <td>1-2 sessions</td>
+                        </tr>
+                        <tr>
+                            <td>Anatomical Study</td>
+                            <td>Complete Series</td>
+                            <td>6-8 months</td>
+                            <td>3-4 sessions</td>
+                        </tr>
+                        <tr>
+                            <td>Mural</td>
+                            <td>Site-Specific</td>
+                            <td>12-18 months</td>
+                            <td>5+ sessions</td>
+                        </tr>
+                        <tr>
+                            <td>Marble Sculpture</td>
+                            <td>Life-size</td>
+                            <td>24-36 months</td>
+                            <td>8+ sessions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="confirmationModalLabel">Message Sent</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your message has been sent and I'll get back to you as soon as possible.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-sections">
+                <div class="footer-column">
+                    <h5>About</h5>
+                    <ul>
+                        <li><a href="#">The Artist</a></li>
+                        <li><a href="#">Timeline</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 Da Vinci Portfolio. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
